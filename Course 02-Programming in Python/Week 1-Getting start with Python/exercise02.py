@@ -9,14 +9,23 @@
 #   Your total bill is $ 9.74
 
 # Modify the line below
-coffee = input('1 coffee @: $ ')
+#coffee = input('1 coffee @: $ ')
 
 # Modify the line below
-sandwich = input('1 sandwich @: $ ')
+#sandwich = input('1 sandwich @: $ ')
 
 # Modify the line below
-cake = input('1 cake @: $ ')
+#cake = input('1 cake @: $ ')
 
-bill_total = float(coffee) + float(sandwich) + float(cake)
+#bill_total = float(coffee) + float(sandwich) + float(cake)
 
-print('Your total bill is $', round(bill_total,2))
+#print('Your total bill is $', round(bill_total,2))
+
+#It is better to convert the type first 
+coffee = float(input('1 coffee @: $ '))
+sandwich = float(input('1 sandwich @: $ '))
+cake = float(input('1 cake @: $ '))
+
+bill_total = coffee + sandwich + cake
+
+print('Your total bill is $', round(bill_total, 2))
