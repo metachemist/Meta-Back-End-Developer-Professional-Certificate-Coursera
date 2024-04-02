@@ -50,10 +50,19 @@ def print_order(order):
     return order
     
 def summarize_order(order):
-
+    """ Summarizes the order """
+    names = [item["name"] for item in order]
+    subtotal = calculate_subtotal(order)
+    tax = calculate_tax(subtotal)
+    total = subtotal + tax
+    return names, round(total, 2)
 
 def calculate_tax(subtotal):  
-
+    """ Calculates the tax of an order """
+    tax = subtotal * 0.15
+    return round(tax, 2)
 
 def calculate_subtotal(order):
-    
+    """ Calculates the subtotal of an order """
+    subtotal = sum(item["price"] for item in order)
+    return subtotal
