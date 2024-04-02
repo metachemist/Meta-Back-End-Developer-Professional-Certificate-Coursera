@@ -41,8 +41,19 @@ def take_order():
         order.extend(menu[int(item)])
     return order
 
+# print_order called by main function
 def print_order(order):
     print("You have ordered" + str(len(order)) + "items")
     items = []
     items = [item["name"] for item in order]
+    print(items)
+    return order
+    
+def summarize_order(order):
+
+
+def calculate_tax(subtotal):  
+
+
+def calculate_subtotal(order):
     
